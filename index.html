@@ -3,76 +3,61 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="WDD 131 Dynamic Web Fundamentals personal profile page">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ayodele Daniel</title>
-    <link rel="stylesheet" href="week01/styles/base.css">
+
+    <title>WDD 131: Dynamic Web Fundamentals-Ayodele Daniel</title>
+
+    <meta name="description"
+        content="WDD 131 - Dynamic Web Fundamentals, Ayodele Daniel, personal homepage, coursework, web development learning.">
+    <meta name="author" content="Ayodele Daniel">
+    <link rel="stylesheet" href="../wdd131/week01/styles/base.css">
 </head>
 
 <body>
     <header>
-        <h1>WDD 131: Dynamic Web Fundamentals</h1>
-        <nav aria-label="Main Navigation">
-            <a href="#">LinkedIn</a>
-            <a href="#">I-Learn</a>
-            <a href="#">Library</a>
-            <a href="#">Final Project</a>
+        <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+
+        <nav>
+            <a href="www.linkedin.com/in/daniel-ayodele-21826a234" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://byupw.instructure.com/about/64446" target="_blank" rel="noopener">BYU Pathway</a>
+            <a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank" rel="noopener">Scriptures</a>
+            <a href="#FinalProject">Final Project</a>
         </nav>
     </header>
 
     <main>
-        <h1>Your Name</h1>
+        <h1>Ayodele Daniel</h1>
 
-        <section class="grid">
-            <section class="card">
-                <h3>About Me</h3>
-                <div class="about">
-                    <p>
-                        my name is ayodele daniel i am 22 years old
-                        i live in nigeria i love coding and playing football
-                    </p>
-                    <img src="week01/images/profile.png"
-                        alt="daniel">
-                </div>
-        
+        <section class="card">
+            <h2>About Me</h2>
+            <img src="../wdd131/week01/images/profile.png" alt="Ayodele Daniel">
+            <p>
+                I'm Ayodele Daniel, a web developer studying Dynamic Web Fundamentals. I enjoy building websites,
+                learning JavaScript and CSS, and exploring new web technologies. In my free time I like Cooking,
+                Researching about trending technology, and reading about technology and history.
+            </p>
+        </section>
 
-                <h4>Abuja, Nigeria</h4>
-                <div class="location">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
-                        alt="Flag of Nigeria">
-                    <figure>
-                        <img src="https://source.unsplash.com/featured/?nigeria,landscape"
-                            alt="Representative landscape or city view from Nigeria" width="300" loading="lazy">
-                    </figure>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Flag_of_Nigeria.svg"
-                        alt="Flag of Nigeria" width="150" loading="lazy">
-                    <img src="https://source.unsplash.com/featured/?nigeria" alt="Scenic view in Nigeria" width="300"
-                        loading="lazy">
-                </div>
-            </section>
-
-            <section class="card">
-                <h3>Web Dev Resources</h3>
-                <ul>
-                    <li><a href="https://dev.to" target="_blank" rel="noopener noreferrer">Dev.to Community</a></li>
-                    <li><a href="https://www.smashingmagazine.com" target="_blank" rel="noopener noreferrer">Smashing
-                            Magazine</a></li>
-                    <li><a href="https://css-tricks.com" target="_blank" rel="noopener noreferrer">CSS Tricks</a></li>
-                    <li><a href="https://www.w3schools.com" target="_blank" rel="noopener noreferrer">W3Schools</a></li>
-                    <li><a href="https://picsum.photos" target="_blank" rel="noopener noreferrer">Lorem Picsum</a></li>
-                </ul>
-            </section>
+        <section class="card">
+            <h2>Abuja, Nigeria</h2>
+            <img src="../wdd131/week01/images/place.webp" alt="Abuja, Nigeria">
+            <p>
+                I love Abuja for its blend of modern city life and natural beauty, from the calm presence of Aso Rock
+                to the green parks and quiet neighborhoods. The pleasant climate, friendly community, and easy access to
+                nature walks and cultural sites make it peaceful, inspiring, and a place I am proud to call home.
+            </p>
         </section>
     </main>
 
     <footer>
         <p>
-            © <span id="year"></span> Ayodele Daniel | Nigeria
+            &copy; <span id="currentYear"></span> Ayodele Daniel - Abuja, Nigeria
         </p>
         <p id="lastModified"></p>
     </footer>
 
-    <script src="getdates.js"></script>
+
+    <script src="../wdd131/week01/scripts/getdates.js"></script>
 </body>
 
 </html>
