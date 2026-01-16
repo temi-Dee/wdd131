@@ -1,5 +1,4 @@
-
-@media (min-width: 768px) {
+@media (min-width: 900px) {
     .site-header {
         display: grid;
         grid-template-columns: 240px 1fr;

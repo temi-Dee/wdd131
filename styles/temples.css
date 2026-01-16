@@ -1,4 +1,53 @@
+/* ===========
+   Base / Reset
+   =========== */
+:root {
+    --bg: #f5f7fa;
+    --ink: #222;
+    --muted: #6b7280;
+    --brand: #1f4b6e;
+    --brand-ink: #fff;
+    --card: #fff;
+    --border: #d1d5db;
+    --shadow: 0 2px 6px rgba(0, 0, 0, .08);
+}
 
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Roboto', system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* ===========
+   Header + Nav
+   =========== */
+.site-header {
+    background: var(--brand);
+    color: var(--brand-ink);
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+.brand h1 {
+    margin: 0.3rem 0;
+    font-family: 'Merriweather', serif;
+    font-size: 1.4rem;
+    text-align: center;
+}
+
+/* Hamburger button (mobile only) */
 .menu-btn {
     appearance: none;
     background: transparent;
