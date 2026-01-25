@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Page title & metadata -->
+    <title>Abuja, Nigeria — Place Page</title>
+    <meta name="description"
+        content="WDD 131 - Place page about Abuja, Nigeria (Federal Capital Territory) with responsive design, hero images, and weather including wind chill logic." />
+    <meta name="author" content="Ayodele Daniel" />
+
+    <!-- Stylesheets -->
+<link rel="stylesheet" href="styles/place.css">
+<link rel="stylesheet" href="styles/place_large.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+    rel="stylesheet">
+<script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+    <!-- HEADER -->
+    <header class="site-header">
+        <div class="container">
+            <h1>Abuja, Nigeria</h1>
+        </div>
+    </header>
+
+    <!-- MAIN -->
+    <main>
+        <!-- HERO -->
+        <section class="hero" aria-label="Abuja hero image">
+            <picture>
+                <!-- Mobile/default WebP image -->
+                <img src="images/place.webp" width="1600" height="700"
+                    alt="Green gradient inspired by Nigeria flag tones" loading="lazy" />
+        </picture>
+        <div class="hero__text">
+            <h2>Abuja, Nigeria</h2>
+            <p>Capital in the Federal Capital Territory is home to Aso Rock, national monuments, and vibrant modern districts.</p>
+        </div>
+    </section>
+
+    <!-- CONTENT GRID -->
+    <div class=" container">
+                <div class="grid">
+                    <!-- ABOUT SECTION -->
+                    <section class="section data" aria-labelledby="data-title">
+                        <h2 id="data-title">About Abuja</h2>
+                        <p>
+                            Abuja is Nigeria’s planned capital city within the Federal Capital
+                            Territory (FCT), noted for its central location, distinctive granite
+                            outcrops like Aso Rock, and national institutions.
+                        </p>
+                        <dl>
+                            <dt>Country</dt>
+                            <dd>Nigeria</dd>
+                            <dt>Territory</dt>
+                            <dd>Federal Capital Territory (FCT)</dd>
+                            <dt>Notable</dt>
+                            <dd>Aso Rock, National Mosque, National Christian Centre, Millennium Park</dd>
+                            <dt>Best time to visit</dt>
+                            <dd>Nov–Mar (dry season), Apr–Oct (green landscapes; expect rains)</dd>
+                        </dl>
+                    </section>
+
+                    <!-- WEATHER SECTION -->
+                    <section class="section weather" aria-labelledby="weather-title">
+                        <div class="weather__header">
+                            <!-- SVG icon is visible in mobile; hidden on wider view via CSS -->
+                            <h2 id="weather-title">Weather</h2>
+                        </div>
+
+                        <div class="weather__content" aria-live="polite">
+                            <p><span class="label">Condition:</span> Partly cloudy</p>
+                            <p><span class="label">Temperature:</span> <span id="temp">-</span> °C</p>
+                            <p><span class="label">Wind:</span> <span id="wind">-</span> km/h</p>
+                            <p><span class="label">Wind chill:</span> <span id="windchill">—</span></p>
+                        </div>
+
+                        <small class="units">
+                            Metric units (°C, km/h). Wind chill appears only when conditions apply.
+                        </small>
+                    </section>
+                </div>
+                </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <p>&copy; <span id="year"></span> Daniel Ayodele</p>
+            <p>Last modified: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+
+</html>
