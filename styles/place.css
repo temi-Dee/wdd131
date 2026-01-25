@@ -170,7 +170,8 @@ footer .container {
     background: var(--primary);
     color: var(--card);
     text-align: center;
-    padding: 1rem;
+    padding: 2rem;
+    max-width: 100%;
 }
 
 
