@@ -1,0 +1,180 @@
+/* Base */
+:root {
+    --bg: #f5f7fa;
+    --ink: #222;
+    --muted: #6b7280;
+    --brand: #1f4b6e;
+    --brand-ink: #fff;
+    --card: #fff;
+    --border: #d1d5db;
+    --shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Roboto', system-ui, Segoe UI, Arial, sans-serif;
+    line-height: 1.5;
+}
+
+/* Header & Nav */
+.site-header {
+    background: var(--brand);
+    color: var(--brand-ink);
+    padding: 0.5rem 1rem;
+    position: sticky;
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 10;
+}
+
+.brand h1 {
+    margin: 0.3rem 0;
+    font-size: 1.4rem;
+}
+
+/* Hamburger (mobile) */
+.menu-btn {
+    appearance: none;
+    background: transparent;
+    border: 2px solid var(--brand-ink);
+    color: var(--brand-ink);
+    border-radius: 6px;
+    padding: 0.4rem 0.6rem;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Nav */
+.site-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    /* hidden by default on mobile */
+    flex-direction: column;
+    /* stacked on mobile */
+    gap: 0.25rem;
+}
+
+.site-nav.open ul {
+    display: flex;
+}
+
+.site-nav a {
+    display: block;
+    color: var(--brand-ink);
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    border-radius: 6px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.site-nav a:hover,
+.site-nav a:focus {
+    background: var(--brand-ink);
+    color: var(--brand);
+}
+
+/* Main */
+main {
+    max-width: 1100px;
+    margin: 1rem auto;
+    padding: 0 1rem 2rem;
+}
+
+.page-title {
+    text-align: center;
+    font-weight: 700;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Gallery Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+/* Card */
+.card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    box-shadow: var(--shadow);
+    overflow: hidden;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.card .content {
+    padding: 0.75rem 1rem;
+}
+
+.card h3 {
+    margin: 0 0 0.35rem;
+    font-size: 1.05rem;
+}
+
+.card .meta {
+    color: var(--muted);
+    margin: 0.15rem 0;
+    font-size: 0.95rem;
+}
+
+/* Footer */
+.site-footer {
+    background: var(--brand);
+    color: var(--brand-ink);
+    text-align: center;
+    padding: 1rem;
+}
+
+.site-footer p {
+    margin: 0.25rem 0;
+}
+
+/* Large screens */
+@media (min-width: 900px) {
+    .site-header {
+        display: grid;
+        grid-template-columns: 240px 1fr;
+        gap: 1rem;
+        padding: 0.5rem 2rem;
+    }
+
+    .brand h1 {
+        text-align: left;
+        font-size: 1.6rem;
+    }
+
+    .menu-btn {
+        display: none;
+    }
+
+    .site-nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 0.5rem;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 1.25rem;
+    }
+}

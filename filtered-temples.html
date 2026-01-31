@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Filtered Temples - Ayodele Daniel</title>
+    <meta name="description" content="Filtered temple gallery with lazy loading and interactive filters." />
+    <meta name="author" content="Ayodele Daniel" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700&display=swap" rel="stylesheet">
+   <link rel="stylesheet" href="styles/filtered-temples.css">
+   <link rel="stylesheet" href="styles/filtered-temples-large.css">
+   <script defer src="scripts/filtered-temples.js"></script>
+</head>
+
+<body>
+    <header class="site-header">
+        <div class="brand">
+            <h1>Temple Album</h1>
+        </div>
+
+        <!-- Hamburger button (mobile) -->
+        <button id="menu" class="menu-btn" aria-label="Open menu" aria-controls="primaryNav"
+            aria-expanded="false">☰</button>
+
+        <!-- Primary navigation -->
+        <nav id="primaryNav" class="site-nav" aria-label="Primary">
+            <ul>
+                <li><a href="#" data-filter="home">Home</a></li>
+                <li><a href="#" data-filter="old">Old</a></li>
+                <li><a href="#" data-filter="new">New</a></li>
+                <li><a href="#" data-filter="large">Large</a></li>
+                <li><a href="#" data-filter="small">Small</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h2 class="page-title" id="pageTitle">Home</h2>
+
+        <!-- Dynamic gallery container -->
+        <section id="gallery" class="gallery" aria-live="polite"></section>
+    </main>
+
+    <footer class="site-footer">
+        <p>&copy; <span id="currentyear"></span> Ayodele Daniel — Abuja, Nigeria</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>
