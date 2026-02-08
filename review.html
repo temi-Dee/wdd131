@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Review Submitted</title>
+    <meta name="description"
+        content="Thank you page confirming your product review submission with total reviews counter.">
+    <meta name="author" content="Daniel Ayodele">
+    <link rel="stylesheet" href="/styles/form.css">
+</head>
+
+<body>
+    <header class="site-header container">
+        <h1>Thank You!</h1>
+        <p class="lede">Your review has been submitted successfully.</p>
+    </header>
+
+    <main class="container">
+        <section class="card">
+            <h2>Submission Summary</h2>
+            <dl class="summary" id="summary">
+                <!-- Populated by review.js -->
+            </dl>
+        </section>
+
+        <section class="counter card">
+            <h2>Class Review Counter</h2>
+            <p id="counterText">Total reviews submitted: <strong id="reviewCount">0</strong></p>
+            <p class="note">Stored in your browser with localStorage. The count increases each time this page loads
+                after submission.</p>
+        </section>
+
+        <p><a href="./form.html" class="btn">Submit another review</a></p>
+    </main>
+
+    <footer class="site-footer container">
+        <p>© <span id="year"></span> Daniel Ayodele • <a href="./references.html">References</a></p>
+    </footer>
+
+    <script src="./scripts/review.js"></script>
+</body>
+
+</html>

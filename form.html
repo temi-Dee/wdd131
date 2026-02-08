@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Review Form</title>
+    <meta name="description"
+        content="Submit a product review including rating, installation date, useful features, and optional written feedback.">
+    <meta name="author" content="Daniel Ayodele">
+    <link rel="stylesheet" href="./styles/form.css">
+</head>
+
+<body>
+    <header class="site-header container">
+        <h1>Product Review</h1>
+        <p class="lede">Please complete the form below to submit your review.</p>
+    </header>
+
+    <main class="container">
+        <form action="./review.html" method="get">
+            <!-- PRODUCT NAME -->
+            <div class="form-row">
+                <label for="productName">Product Name <span aria-hidden="true">*</span></label>
+                <select id="productName" name="product" required aria-describedby="productHelp">
+                    <option value="" disabled selected>Select a Product …</option>
+                    <!-- Options injected by scripts/form.js from scripts/products.js -->
+                </select>
+                <small id="productHelp" class="help">Choose the product you are reviewing.</small>
+            </div>
+
+            <!-- OVERALL RATING -->
+            <fieldset class="form-row">
+                <legend>Overall Rating <span aria-hidden="true">*</span></legend>
+                <div class="rating" aria-label="Overall rating from 1 to 5">
+                    <!-- Each radio has same name="rating", distinct id, required -->
+                    <input type="radio" id="star5" name="rating" value="5" required aria-label="5 stars">
+                    <label for="star5" title="5 stars">★</label>
+
+                    <input type="radio" id="star4" name="rating" value="4" required aria-label="4 stars">
+                    <label for="star4" title="4 stars">★</label>
+
+                    <input type="radio" id="star3" name="rating" value="3" required aria-label="3 stars">
+                    <label for="star3" title="3 stars">★</label>
+
+                    <input type="radio" id="star2" name="rating" value="2" required aria-label="2 stars">
+                    <label for="star2" title="2 stars">★</label>
+
+                    <input type="radio" id="star1" name="rating" value="1" required aria-label="1 star">
+                    <label for="star1" title="1 star">★</label>
+                </div>
+                <small class="help">Tip: click a star to set your rating.</small>
+            </fieldset>
+
+            <!-- DATE OF INSTALLATION -->
+            <div class="form-row">
+                <label for="installDate">Date of Installation <span aria-hidden="true">*</span></label>
+                <input type="date" id="installDate" name="installed" required>
+            </div>
+
+            <!-- USEFUL FEATURES (CHECK ALL THAT APPLY) -->
+            <fieldset class="form-row">
+                <legend>Useful Features (check all that apply)</legend>
+                <div class="checks">
+                    <div class="check">
+                        <input type="checkbox" id="feat1" name="features" value="Durability">
+                        <label for="feat1">Durability</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="feat2" name="features" value="Ease of Use">
+                        <label for="feat2">Ease of Use</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="feat3" name="features" value="Performance">
+                        <label for="feat3">Performance</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="feat4" name="features" value="Design">
+                        <label for="feat4">Design</label>
+                    </div>
+                    <div class="check">
+                        <input type="checkbox" id="feat5" name="features" value="Value">
+                        <label for="feat5">Value</label>
+                    </div>
+                </div>
+            </fieldset>
+
+            <!-- WRITTEN REVIEW (OPTIONAL) -->
+            <div class="form-row">
+                <label for="reviewText">Written Review (optional)</label>
+                <textarea id="reviewText" name="notes" rows="6" placeholder="Share your experience..."></textarea>
+            </div>
+
+            <!-- USER NAME (OPTIONAL) -->
+            <div class="form-row">
+                <label for="userName">Your Name (optional)</label>
+                <input type="text" id="userName" name="user" inputmode="text" autocomplete="name"
+                    placeholder="e.g., Daniel Ayodele">
+            </div>
+
+            <!-- SUBMIT -->
+            <div class="form-actions">
+                <input type="submit" value="Submit Review" class="btn">
+            </div>
+        </form>
+    </main>
+
+    <footer class="site-footer container">
+        <p>© <span id="year"></span> Daniel Ayodele • <a href="./references.html">References</a></p>
+    </footer>
+
+    <script src="./scripts/products.js"></script>
+    <script src="./scripts/form.js"></script>
+</body>
+
+</html>
