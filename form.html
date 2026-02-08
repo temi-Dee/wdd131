@@ -9,6 +9,8 @@
         content="Submit a product review including rating, installation date, useful features, and optional written feedback.">
     <meta name="author" content="Daniel Ayodele">
     <link rel="stylesheet" href="./styles/form.css">
+    <script src="./scripts/products.js" defer></script>
+    <script src="./scripts/form.js" defer></script>
 </head>
 
 <body>
@@ -32,7 +34,7 @@
             <!-- OVERALL RATING -->
             <fieldset class="form-row">
                 <legend>Overall Rating <span aria-hidden="true">*</span></legend>
-                <div class="rating" aria-label="Overall rating from 1 to 5">
+                <div class="rating">
                     <!-- Each radio has same name="rating", distinct id, required -->
                     <input type="radio" id="star5" name="rating" value="5" required aria-label="5 stars">
                     <label for="star5" title="5 stars">★</label>
