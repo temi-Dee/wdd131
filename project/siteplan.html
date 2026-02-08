@@ -8,7 +8,7 @@
 
     <!-- Audit-required meta -->
     <meta name="description"
-        content="Site plan for Daniel Ayodele’s personal portfolio: site name, purpose, audience scenarios, color schema, typography, and wireframes (mobile & desktop).">
+        content="Site plan for Daniel Ayodele’s personal portfolio: site name, purpose, scenarios, color schema, typography, and wireframes (mobile & desktop).">
     <meta name="author" content="Daniel Ayodele">
 
     <!-- Local CSS only -->
@@ -31,17 +31,14 @@
                 and freelance inquiries. <em>Logo:</em> a simple monogram “DA” mark will be used in the header and
                 favicon.
             </p>
-            <p class="note">
-                Optional domain to consider later: <code>ayodele-dev.com</code> 
-            </p>
+            <p class="note">Optional domain to consider later: <code>ayodele-dev.com</code> (not required for this
+                class).</p>
         </section>
 
         <!-- SITE PURPOSE -->
         <section aria-labelledby="site-purpose">
             <h2 id="site-purpose">Site Purpose</h2>
-            <p>
-                The site serves as a hub to showcase my projects, skills, and background. It will provide:
-            </p>
+            <p>The site serves as a hub to showcase my projects, skills, and background. It will provide:</p>
             <ul>
                 <li>Featured projects with tech stacks and links to GitHub/live demos</li>
                 <li>Skills overview and short bio (About)</li>
@@ -63,8 +60,9 @@
             <h2 id="color-schema">Color Schema</h2>
             <p>These colors will be applied consistently throughout the site:</p>
 
-            <div class="swatch-grid" role="list">
-                <figure class="swatch" role="listitem" aria-label="Primary blue for headings and actions">
+            <!-- Removed role attributes per validator -->
+            <div class="swatch-grid">
+                <figure class="swatch" aria-label="Primary blue for headings and actions">
                     <div class="swatch-chip chip-primary" aria-hidden="true"></div>
                     <figcaption>
                         <span class="code">#1A73E8</span> – <strong>Primary</strong>: headings, navigation links,
@@ -72,21 +70,21 @@
                     </figcaption>
                 </figure>
 
-                <figure class="swatch" role="listitem" aria-label="Accent gold for highlights">
+                <figure class="swatch" aria-label="Accent gold for highlights">
                     <div class="swatch-chip chip-accent" aria-hidden="true"></div>
                     <figcaption>
                         <span class="code">#FBBC05</span> – <strong>Accent</strong>: highlights, icons, separators.
                     </figcaption>
                 </figure>
 
-                <figure class="swatch" role="listitem" aria-label="Neutral body text color">
+                <figure class="swatch" aria-label="Neutral body text color">
                     <div class="swatch-chip chip-text" aria-hidden="true"></div>
                     <figcaption>
                         <span class="code">#222222</span> – <strong>Text</strong>: primary body copy and labels.
                     </figcaption>
                 </figure>
 
-                <figure class="swatch" role="listitem" aria-label="Background base">
+                <figure class="swatch" aria-label="Background base">
                     <div class="swatch-chip chip-bg" aria-hidden="true"></div>
                     <figcaption>
                         <span class="code">#FFFFFF</span> – <strong>Background</strong>: page background and cards.
@@ -94,8 +92,7 @@
                 </figure>
             </div>
 
-            <p class="note">
-                This document itself uses the selected color schema for headings, accents, and components.
+            <p class="note">This document itself uses the selected color schema for headings, accents, and components.
             </p>
         </section>
 
@@ -106,15 +103,13 @@
                 <li><strong>Headings:</strong> System UI stack (Segoe UI/Helvetica/Arial) – clear and modern.</li>
                 <li><strong>Body:</strong> Same stack for consistency and performance.</li>
             </ul>
-            <p class="note">
-                Using a system font stack avoids external requests for this planning doc. The final site may adopt a web
-                font if needed.
-            </p>
+            <p class="note">Using a system font stack avoids external requests for this planning doc. The final site may
+                adopt a web font if needed.</p>
         </section>
 
         <!-- WIREFRAMES -->
         <section aria-labelledby="wireframes">
-            <h2 id="wireframes">Wireframes</h2>
+            <h2 id="wireframes">Wireframe</h2>
 
             <h3>Mobile Layout</h3>
             <ul>
@@ -127,36 +122,37 @@
                 <li>Footer with social links and references link</li>
             </ul>
 
-                <figure class="wf">
-                    <img src="./images/wireframe-mobile.png"
-                        alt="Mobile wireframe showing header, hero with photo and tagline, about, projects cards, skills, contact form, and footer."
-                        width="360" height="640" loading="lazy">
-                    <figcaption>Mobile wireframe</figcaption>
-                </figure>
-    
-                <h3>Desktop Layout</h3>
+            <h3>Desktop Layout</h3>
+            <figure class="wf">
+                <img src="./images/wireframe-mobile.png" alt="Mobile wireframe showing a vertical single-column layout with header containing site title and menu toggle at top, followed by hero section with photo placeholder on left and tagline text on right, about section, stacked project cards, skills list, contact form, and footer with social links at bottom.">
+      <ul>
+        <li>Top navigation bar</li>
+        <li>Hero split layout: image left, intro right</li>
+        <li>Projects grid (3–4 cards)</li>
+        <li>Skills grid with icons</li>
+        <li>Contact form full width</li>
+        <li>Footer across the bottom</li>
+      </ul>
+
+      <figure class=" wf">
+                <img src="./images/wireframe-desktop.png" alt="Desktop wireframe for a portfolio site displaying a horizontal layout with a top navigation bar containing site title and menu links, a hero section split into two columns with a photo placeholder on the left and introductory tagline text on the right, a projects section organized in a 3-to-4 column grid of project cards, a skills section displayed as an icon grid, a full-width contact form, and a footer spanning the entire bottom with social links and copyright information.">
+
+    <!-- VALIDATION / TESTING -->
+    <section aria-labelledby=" testing">
+                <h2 id="testing">Validation &amp; Testing Plan</h2>
                 <ul>
-                    <li>Projects grid (3–4 cards)</li>
-                    <li>Skills grid with icons</li>
-                    <li>Contact form full width</li>
-                    <li>Footer across the bottom</li>
+                    <li>Validate HTML with the W3C validator and resolve any errors or warnings.</li>
+                    <li>Use DevTools CSS Overview to confirm color contrast meets accessibility guidelines.</li>
+                    <li>Run Lighthouse (mobile &amp; desktop) for Performance, Accessibility, Best Practices, and SEO.
+                    </li>
                 </ul>
-    
-                <figure class="wf">
-                    <img src="./images/wireframe-desktop.png"
-                        alt="Desktop wireframe showing top navigation, split hero, projects grid, skills grid, contact section, and footer."
-                        width="1200" height="600" loading="lazy">
-                    <figcaption>Desktop wireframe</figcaption>
-                </figure>
-            </section>
-    
-           
+        </section>
     </main>
 
     <footer class="container">
-        <p>© <span id="year"></span> Daniel Ayodele • #References</a></p>
+        <p>© <span id="year"></span> Daniel Ayodele • references.htmlReferences</a></p>
         <script>
-            /* Optional small enhancement; remove if your instructor disallows JS here. */
+            /* Optional small enhancement; remove if not allowed. */
             document.getElementById('year').textContent = new Date().getFullYear();
         </script>
     </footer>
