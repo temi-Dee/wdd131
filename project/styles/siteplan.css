@@ -1,0 +1,162 @@
+/* ------------------------------
+   Design tokens
+------------------------------ */
+:root {
+    --primary: #1a73e8;
+    /* headings, buttons */
+    --accent: #fbbc05;
+    /* highlights */
+    --text: #222222;
+    /* body text */
+    --bg: #ffffff;
+    /* background */
+    --muted: #6b7280;
+    /* secondary text */
+    --border: #e5e7eb;
+    /* outlines/dividers */
+}
+
+/* ------------------------------
+   Base / Typography
+------------------------------ */
+html {
+    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI",
+        Roboto, "Helvetica Neue", Arial, "Noto Sans",
+        "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol",
+        "Noto Color Emoji";
+    color: var(--text);
+    background: var(--bg);
+}
+
+body {
+    margin: 0;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 72rem;
+    margin-inline: auto;
+    padding: 1.5rem;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--primary);
+    line-height: 1.25;
+    margin-block: 1rem 0.5rem;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: clamp(1.75rem, 2.5vw, 2.25rem);
+}
+
+h2 {
+    font-weight: 700;
+    font-size: clamp(1.25rem, 2vw, 1.5rem);
+}
+
+h3 {
+    font-weight: 600;
+    font-size: clamp(1.1rem, 1.5vw, 1.25rem);
+}
+
+p,
+li {
+    font-size: 1rem;
+}
+
+.lede {
+    color: var(--muted);
+    margin-block-start: 0.25rem;
+}
+
+/* ------------------------------
+   Color Swatches
+------------------------------ */
+.swatch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 1rem;
+    margin-block: 0.75rem 1.25rem;
+}
+
+.swatch {
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    background: #fff;
+}
+
+.swatch-chip {
+    width: 120px;
+    height: 40px;
+    border-radius: 0.4rem;
+    border: 1px solid var(--border);
+    margin-block-end: 0.5rem;
+}
+
+.chip-primary {
+    background: var(--primary);
+}
+
+.chip-accent {
+    background: var(--accent);
+}
+
+.chip-text {
+    background: var(--text);
+}
+
+.chip-bg {
+    background: var(--bg);
+    border: 1px dashed var(--border);
+}
+
+.code {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+        "Liberation Mono", "Courier New", monospace;
+}
+
+/* ------------------------------
+   Wireframes
+------------------------------ */
+.wf {
+    margin-block: 1rem 2rem;
+}
+
+.wf img {
+    max-width: 100%;
+    height: auto;
+    /* preserve aspect ratio */
+    display: block;
+    border: 1px solid var(--border);
+    border-radius: 0.5rem;
+    background: #fff;
+}
+
+.wf figcaption {
+    color: var(--muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+/* ------------------------------
+   Footer
+------------------------------ */
+footer {
+    border-top: 1px solid var(--border);
+    margin-top: 2rem;
+    color: var(--muted);
+}
+
+footer a {
+    color: var(--primary);
+    text-decoration: none;
+}
+
+footer a:focus,
+footer a:hover {
+    text-decoration: underline;
+}

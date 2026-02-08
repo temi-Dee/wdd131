@@ -2,145 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio – Site Plan</title>
-    https://fonts.googleapis.com
-    https://fonts.gstatic.com
-    https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Roboto:wght@300;400;500&display=swap
 
-    <style>
-        :root {
-            --primary: #1a73e8;
-            /* Blue – headings, buttons */
-            --accent: #fbbc05;
-            /* Gold – highlights, icons */
-            --text: #222;
-            /* Body text */
-            --background: #ffffff;
-        }
+    <!-- Audit-required meta -->
+    <meta name="description"
+        content="Site plan for Daniel Ayodele’s personal portfolio: site name, purpose, audience scenarios, color schema, typography, and wireframes (mobile & desktop).">
+    <meta name="author" content="Daniel Ayodele">
 
-        body {
-            font-family: "Roboto", sans-serif;
-            background: var(--background);
-            color: var(--text);
-            margin: 2rem;
-            line-height: 1.6;
-        }
-
-        h1,
-        h2,
-        h3 {
-            font-family: "Poppins", sans-serif;
-            color: var(--primary);
-        }
-
-        .color-sample {
-            width: 120px;
-            height: 40px;
-            border-radius: 6px;
-            margin: 0.3rem 0;
-        }
-    </style>
+    <!-- Local CSS only -->
+    <link rel="stylesheet" href="./styles/siteplan.css">
 </head>
 
 <body>
-    <h1>Personal Portfolio Website – Site Plan</h1>
+    <header class="container">
+        <h1>Personal Portfolio Website – Site Plan</h1>
+        <p class="lede">This planning document outlines structure, content, and design for my personal portfolio.</p>
+    </header>
 
-    <!-- SITE NAME -->
-    <section>
-        <h2>Site Name</h2>
-        <p><strong>Daniel Ayodele Portfolio</strong></p>
-        <p>
-            I chose this name because it represents my personal brand and helps visitors
-            quickly understand that this website showcases my skills, projects, and professional
-            background as a developer.
-        </p>
-    </section>
+    <main class="container">
+        <!-- SITE NAME -->
+        <section aria-labelledby="site-name">
+            <h2 id="site-name">Site Name</h2>
+            <p><strong>Daniel Ayodele Portfolio</strong></p>
+            <p>
+                This name clearly identifies the site as my professional portfolio to support job applications
+                and freelance inquiries. <em>Logo:</em> a simple monogram “DA” mark will be used in the header and
+                favicon.
+            </p>
+            <p class="note">
+                Optional domain to consider later: <code>ayodele-dev.com</code> 
+            </p>
+        </section>
 
-    <!-- PURPOSE -->
-    <section>
-        <h2>Site Purpose</h2>
-        <p>
-            The purpose of this portfolio website is to present my work, skills, and background
-            to potential employers, clients, and collaborators. The site will include project
-            showcases, contact information, technical skills, and professional information.
-            It serves as a digital resume and portfolio to support job applications or
-            freelance opportunities.
-        </p>
-    </section>
+        <!-- SITE PURPOSE -->
+        <section aria-labelledby="site-purpose">
+            <h2 id="site-purpose">Site Purpose</h2>
+            <p>
+                The site serves as a hub to showcase my projects, skills, and background. It will provide:
+            </p>
+            <ul>
+                <li>Featured projects with tech stacks and links to GitHub/live demos</li>
+                <li>Skills overview and short bio (About)</li>
+                <li>Accessible contact form and social links</li>
+            </ul>
+        </section>
 
-    <!-- Scenarios -->
-    <section>
-        <h2>Scenarios</h2>
-        <ul>
-            <li>
-                A recruiter wants to see examples of my past projects and the technologies I have used.
-            </li>
-            <li>
-                A potential client wants to contact me for a freelance job and needs an easy way to send
-                a message or request.
-            </li>
-        </ul>
-    </section>
+        <!-- SCENARIOS -->
+        <section aria-labelledby="scenarios">
+            <h2 id="scenarios">Scenarios</h2>
+            <ul>
+                <li>“Where can I quickly view Daniel’s most relevant projects and the technologies used?”</li>
+                <li>“How do I contact Daniel to request freelance work or an interview?”</li>
+            </ul>
+        </section>
 
-    <!-- Color Scheme -->
-    <section>
-        <h2>Color Scheme</h2>
-        <p>These are the primary colors I will use across the website.</p>
+        <!-- COLOR SCHEMA -->
+        <section aria-labelledby="color-schema">
+            <h2 id="color-schema">Color Schema</h2>
+            <p>These colors will be applied consistently throughout the site:</p>
 
-        <h3>Primary Color – #1a73e8</h3>
-        <div class="color-sample" style="background:#1a73e8;"></div>
-        <p>Used for headings, navigation links, and call-to-action buttons.</p>
+            <div class="swatch-grid" role="list">
+                <figure class="swatch" role="listitem" aria-label="Primary blue for headings and actions">
+                    <div class="swatch-chip chip-primary" aria-hidden="true"></div>
+                    <figcaption>
+                        <span class="code">#1A73E8</span> – <strong>Primary</strong>: headings, navigation links,
+                        buttons.
+                    </figcaption>
+                </figure>
 
-        <h3>Accent Color – #fbbc05</h3>
-        <div class="color-sample" style="background:#fbbc05;"></div>
-        <p>Used for highlights, icons, section dividers, and accents.</p>
-    </section>
+                <figure class="swatch" role="listitem" aria-label="Accent gold for highlights">
+                    <div class="swatch-chip chip-accent" aria-hidden="true"></div>
+                    <figcaption>
+                        <span class="code">#FBBC05</span> – <strong>Accent</strong>: highlights, icons, separators.
+                    </figcaption>
+                </figure>
 
-    <!-- Typography -->
-    <section>
-        <h2>Typography</h2>
-        <p><strong>Headings:</strong> Poppins – clean, modern, ideal for titles and emphasis.</p>
-        <p><strong>Body Text:</strong> Roboto – simple, readable, good for paragraphs.</p>
-        <p>These two fonts work together for a professional and accessible layout.</p>
-    </section>
+                <figure class="swatch" role="listitem" aria-label="Neutral body text color">
+                    <div class="swatch-chip chip-text" aria-hidden="true"></div>
+                    <figcaption>
+                        <span class="code">#222222</span> – <strong>Text</strong>: primary body copy and labels.
+                    </figcaption>
+                </figure>
 
-    <!-- Wireframes -->
-    <section>
-        <h2>Wireframes</h2>
+                <figure class="swatch" role="listitem" aria-label="Background base">
+                    <div class="swatch-chip chip-bg" aria-hidden="true"></div>
+                    <figcaption>
+                        <span class="code">#FFFFFF</span> – <strong>Background</strong>: page background and cards.
+                    </figcaption>
+                </figure>
+            </div>
 
-        <h3>Mobile Layout (Example)</h3>
-        <p>
-            A stacked vertical layout with:
-        <ul>
-            <li>Header + Mobile Menu Toggle</li>
-            <li>Hero section with photo + tagline</li>
-            <li>About section</li>
-            <li>Projects displayed in cards</li>
-            <li>Skills list</li>
-            <li>Contact form</li>
-            <li>Footer with social links</li>
-        </ul>
-        </p>
+            <p class="note">
+                This document itself uses the selected color schema for headings, accents, and components.
+            </p>
+        </section>
 
-        <h3>Desktop Layout (Example)</h3>
-        <p>
-            A two‑column or grid layout with:
-        <ul>
-            <li>Top navigation bar</li>
-            <li>Hero section split: image on left, intro text on right</li>
-            <li>3–4 project cards in a responsive grid</li>
-            <li>Skills grid with icons</li>
-            <li>Contact form with full‑width layout</li>
-            <li>Footer across the bottom</li>
-        </ul>
-        </p>
-        <p>
-            (Visual wireframe diagrams will be drawn for the final project pages.)
-        </p>
-    </section>
+        <!-- TYPOGRAPHY -->
+        <section aria-labelledby="typography">
+            <h2 id="typography">Typography</h2>
+            <ul>
+                <li><strong>Headings:</strong> System UI stack (Segoe UI/Helvetica/Arial) – clear and modern.</li>
+                <li><strong>Body:</strong> Same stack for consistency and performance.</li>
+            </ul>
+            <p class="note">
+                Using a system font stack avoids external requests for this planning doc. The final site may adopt a web
+                font if needed.
+            </p>
+        </section>
 
+        <!-- WIREFRAMES -->
+        <section aria-labelledby="wireframes">
+            <h2 id="wireframes">Wireframes</h2>
+
+            <h3>Mobile Layout</h3>
+            <ul>
+                <li>Header with site title and menu toggle</li>
+                <li>Hero: photo + tagline</li>
+                <li>About section</li>
+                <li>Projects as stacked cards</li>
+                <li>Skills list</li>
+                <li>Contact form</li>
+                <li>Footer with social links and references link</li>
+            </ul>
+
+                <figure class="wf">
+                    <img src="./images/wireframe-mobile.png"
+                        alt="Mobile wireframe showing header, hero with photo and tagline, about, projects cards, skills, contact form, and footer."
+                        width="360" height="640" loading="lazy">
+                    <figcaption>Mobile wireframe</figcaption>
+                </figure>
+    
+                <h3>Desktop Layout</h3>
+                <ul>
+                    <li>Projects grid (3–4 cards)</li>
+                    <li>Skills grid with icons</li>
+                    <li>Contact form full width</li>
+                    <li>Footer across the bottom</li>
+                </ul>
+    
+                <figure class="wf">
+                    <img src="./images/wireframe-desktop.png"
+                        alt="Desktop wireframe showing top navigation, split hero, projects grid, skills grid, contact section, and footer."
+                        width="1200" height="600" loading="lazy">
+                    <figcaption>Desktop wireframe</figcaption>
+                </figure>
+            </section>
+    
+           
+    </main>
+
+    <footer class="container">
+        <p>© <span id="year"></span> Daniel Ayodele • #References</a></p>
+        <script>
+            /* Optional small enhancement; remove if your instructor disallows JS here. */
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+    </footer>
 </body>
 
 </html>
