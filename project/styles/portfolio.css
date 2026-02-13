@@ -1236,3 +1236,156 @@ main {
     background-color: var(--white);
     color: var(--primary);
 }
+
+/* ================================================
+   Utility Classes for Inline Styles
+   ================================================ */
+
+/* Section description - centered with light text */
+.section-description {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: var(--spacing-md) auto var(--spacing-xl);
+}
+
+.section-description-short {
+    color: var(--text-light);
+    max-width: 600px;
+    margin: 0 auto var(--spacing-xl);
+}
+
+/* Top margin utilities */
+.mt-sm {
+    margin-top: var(--spacing-sm);
+}
+
+.mt-md {
+    margin-top: var(--spacing-md);
+}
+
+.mt-lg {
+    margin-top: var(--spacing-lg);
+}
+
+.mt-xl {
+    margin-top: var(--spacing-xl);
+}
+
+
+.mt-2xl {
+    margin-top: var(--spacing-2xl);
+}
+
+/* Bottom margin utilities */
+.mb-lg {
+    margin-bottom: var(--spacing-lg);
+}
+
+.mb-xl {
+    margin-bottom: var(--spacing-xl);
+}
+
+/* Contact info text */
+.contact-info-text {
+    color: var(--text-light);
+    margin-bottom: var(--spacing-lg);
+}
+
+.contact-info-paragraph {
+    margin: 0;
+    color: var(--text-light);
+}
+
+.contact-info-paragraph-sm {
+    margin: 0;
+    color: var(--text-light);
+    font-size: var(--font-size-sm);
+}
+
+/* Form styles */
+.form-heading {
+    margin-bottom: var(--spacing-lg);
+}
+
+.btn-full-width {
+    width: 100%;
+}
+
+/* SVG icon alignment */
+.icon-middle {
+    vertical-align: middle;
+}
+
+.icon-margin-right {
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.icon-margin-left {
+    vertical-align: middle;
+    margin-left: 8px;
+}
+
+/* FAQ container */
+.faq-container {
+    max-width: 800px;
+    margin: var(--spacing-xl) auto 0;
+}
+
+/* Availability status box */
+.availability-box {
+    margin-top: var(--spacing-xl);
+    padding: var(--spacing-md);
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+}
+
+.availability-title {
+    color: var(--success);
+    margin-bottom: var(--spacing-sm);
+}
+
+/* Reference page styles */
+.reference-intro {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: var(--spacing-xl);
+}
+
+.reference-list-nested {
+    margin-top: var(--spacing-sm);
+}
+
+.acknowledgments-box {
+    margin-top: var(--spacing-2xl);
+    padding: var(--spacing-lg);
+    background-color: var(--bg-light);
+    border-radius: var(--border-radius);
+    text-align: center;
+}
+
+.acknowledgments-text {
+    color: var(--text-light);
+    margin-top: var(--spacing-md);
+}
+
+.acknowledgments-text-small {
+    color: var(--text-light);
+    margin-top: var(--spacing-sm);
+}
+
+.back-to-home {
+    text-align: center;
+    margin-top: var(--spacing-xl);
+}
+
+/* No results message */
+.no-results {
+    display: none;
+    color: var(--text-light);
+}
+
+/* Text color utility */
+.text-light {
+    color: var(--text-light);
+}

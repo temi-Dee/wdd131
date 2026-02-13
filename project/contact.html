@@ -14,6 +14,8 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/portfolio.css">
+
+    <script src="./scripts/portfolio.js" defer></script>
 </head>
 
 <body>
@@ -58,7 +60,7 @@
                     <!-- Contact Information -->
                     <div class="contact-info">
                         <h3>Contact Information</h3>
-                        <p style="color: var(--text-light); margin-bottom: var(--spacing-lg);">
+                        <p class="contact-info-text">
                             Feel free to reach out through any of these channels. I typically respond within 24-48
                             hours.
                         </p>
@@ -76,7 +78,7 @@
                             </div>
                             <div>
                                 <strong>Email</strong>
-                                <p style="margin: 0; color: var(--text-light);">daniel.ayodele@email.com</p>
+                                <p class="contact-info-paragraph">daniel.ayodele@email.com</p>
                             </div>
                         </div>
 
@@ -91,7 +93,7 @@
                             </div>
                             <div>
                                 <strong>Location</strong>
-                                <p style="margin: 0; color: var(--text-light);">Available for remote work worldwide</p>
+                                <p class="contact-info-paragraph">Available for remote work worldwide</p>
                             </div>
                         </div>
 
@@ -106,11 +108,11 @@
                             </div>
                             <div>
                                 <strong>Response Time</strong>
-                                <p style="margin: 0; color: var(--text-light);">Usually within 24-48 hours</p>
+                                <p class="contact-info-paragraph">Usually within 24-48 hours</p>
                             </div>
                         </div>
 
-                        <h4 style="margin-top: var(--spacing-lg);">Connect With Me</h4>
+                        <h4 class="mt-lg">Connect With Me</h4>
                         <div class="social-links">
                             <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="social-link"
                                 aria-label="GitHub">
@@ -139,18 +141,17 @@
                         </div>
 
                         <!-- Availability Status -->
-                        <div
-                            style="margin-top: var(--spacing-xl); padding: var(--spacing-md); background-color: var(--bg-light); border-radius: var(--border-radius);">
-                            <h4 style="color: var(--success); margin-bottom: var(--spacing-sm);">
+                        <div class="availability-box">
+                            <h4 class="availability-title">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                     fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                    stroke-linejoin="round" style="vertical-align: middle; margin-right: 8px;">
+                                    stroke-linejoin="round" class="icon-margin-right">
                                     <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
                                     <polyline points="22 4 12 14.01 9 11.01"></polyline>
                                 </svg>
                                 Currently Available
                             </h4>
-                            <p style="margin: 0; color: var(--text-light); font-size: var(--font-size-sm);">
+                            <p class="contact-info-paragraph-sm">
                                 I'm open to freelance projects and full-time opportunities. Let's discuss your needs!
                             </p>
                         </div>
@@ -158,7 +159,7 @@
 
                     <!-- Contact Form -->
                     <form class="contact-form" id="contact-form" novalidate>
-                        <h3 style="margin-bottom: var(--spacing-lg);">Send a Message</h3>
+                        <h3 class="form-heading">Send a Message</h3>
 
                         <div class="form-success" id="form-success">
                             Thank you for your message! I'll get back to you as soon as possible.
@@ -232,11 +233,11 @@
                                 characters)</span>
                         </div>
 
-                        <button type="submit" class="btn btn-primary" style="width: 100%;">
+                        <button type="submit" class="btn btn-primary btn-full-width">
                             <span>Send Message</span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" style="vertical-align: middle; margin-left: 8px;">
+                                stroke-linejoin="round" class="icon-margin-left">
                                 <line x1="22" y1="2" x2="11" y2="13"></line>
                                 <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                             </svg>
@@ -250,7 +251,7 @@
         <section class="section section-alt">
             <div class="container">
                 <h2 class="text-center">Frequently Asked Questions</h2>
-                <div style="max-width: 800px; margin: var(--spacing-xl) auto 0;" id="faq-container">
+                <div class="faq-container" id="faq-container">
                     <!-- FAQ items will be dynamically loaded -->
                 </div>
             </div>
@@ -300,7 +301,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="./scripts/portfolio.js"></script>
+  
 </body>
 
 </html>

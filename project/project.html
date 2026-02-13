@@ -14,6 +14,8 @@
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./styles/portfolio.css">
+
+    <script src="./scripts/portfolio.js" defer></script>
 </head>
 
 <body>
@@ -55,8 +57,7 @@
         <section class="section">
             <div class="container">
                 <!-- Filter Buttons -->
-                <div class="project-filters" id="project-filters"
-                    style="display: flex; gap: var(--spacing-md); justify-content: center; margin-bottom: var(--spacing-xl); flex-wrap: wrap;">
+                <div class="project-filters" id="project-filters">
                     <button class="btn btn-primary filter-btn active" data-filter="all">All Projects</button>
                     <button class="btn btn-secondary filter-btn" data-filter="frontend">Frontend</button>
                     <button class="btn btn-secondary filter-btn" data-filter="backend">Backend</button>
@@ -69,7 +70,7 @@
                 </div>
 
                 <!-- No Results Message -->
-                <p id="no-results" class="text-center" style="display: none; color: var(--text-light);">
+                <p id="no-results" class="text-center no-results">
                     No projects found matching the selected category.
                 </p>
             </div>
@@ -79,8 +80,7 @@
         <section class="section section-alt">
             <div class="container">
                 <h2 class="text-center">Technologies I Use</h2>
-                <p class="text-center"
-                    style="color: var(--text-light); max-width: 600px; margin: 0 auto var(--spacing-xl);">
+                <p class="text-center section-description-short">
                     These are the technologies and tools I use to bring ideas to life
                 </p>
                 <div class="skills-grid" id="skills-container">
@@ -93,8 +93,7 @@
         <section class="section">
             <div class="container text-center">
                 <h2>Have a Project in Mind?</h2>
-                <p
-                    style="color: var(--text-light); max-width: 600px; margin: var(--spacing-md) auto var(--spacing-xl);">
+                <p class="section-description">
                     I'm always interested in hearing about new projects and opportunities. Let's discuss how we can work
                     together.
                 </p>
@@ -146,7 +145,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="./scripts/portfolio.js"></script>
+   
 </body>
 
 </html>
